@@ -14,6 +14,8 @@ from langchain.text_splitter import (
 from langchain.document_loaders import PyPDFLoader, TextLoader
 import glob
 
+from config import *
+
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
@@ -57,8 +59,7 @@ NUM_WINDOWS = 2  # 窗口数（大块数量）
 # 存储源文件的目录
 DOCS_DIR = os.path.join(current_directory, "data")
 
-# 存储嵌入向量和 Langchain 文档的目录
-DB_DIR = os.path.join(current_directory, "database_store")
+
 
 FILE_PATH = glob.glob(DOCS_DIR + "/*")
 
